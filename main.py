@@ -360,13 +360,6 @@ async def estado(ctx):
 async def dev(ctx):
     await ctx.send('¡Hola! ¡Aquí tienes un link para convertirte en developper de disocrd! https://discord.com/developers/active-developer.')
 
-# Unknown command
-@bot.event
-async def on_command_error(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
-        await ctx.send("Comando desconocido, usa !cmds para ver todos los comandos disponibles")
-    else:
-        await ctx.send(f"Ocurrió un error: {error}")
 
 # Anti-channel deletion setup
 channel_delete_logs = defaultdict(list)
